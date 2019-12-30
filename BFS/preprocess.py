@@ -53,6 +53,8 @@ def preprocess_data():
                 sentences.append(d['utterance'])  # both USER and SYSTEM
             if len(sentences) == 0:
                 continue
+            if not os.path.exists('data/BFS/' + files[0]):
+                os.makedirs('data/BFS/' + files[0])
             json.dump(dicts, open('data/BFS/' + files[0] + '/QA' + str(cont) + '.json', 'w'))
             cont += 1
     print("All done!")
