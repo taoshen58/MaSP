@@ -26,7 +26,7 @@ def tokenize_items_wikidata_n():
     items_wikidata_n = load_json("data/kb/items_wikidata_n.json")
     for key in items_wikidata_n:
         items_wikidata_n[key] = spacy_tokenize(items_wikidata_n[key])
-    save_json(items_wikidata_n, "data/kb/items_wikidata_n_tokenized")
+    save_json(items_wikidata_n, "data/kb/items_wikidata_n_tokenized.json")
 
 
 def build_inverse_index_spacy_token():
